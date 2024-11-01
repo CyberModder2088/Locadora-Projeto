@@ -3,108 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprar</title>
+    <title>Locadora</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./login.js" defer></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <div>
-        <nav >
-            <a href="#cadastroClientes">Clientes</a>
-            <a href="#cadastroVeiculos">Veiculos na Locadora</a>
-            <a href="#cadastroAlocacoes">Alocações Cadastradas</a>
+    <header>
+        <nav>
+            <a href="#home">Inicio</a>
+            <a href="#carros">Carros</a>
+            <a href="#camionetes">Camionetes</a>
+            <a href="#empresa">Empresa</a>
+            <a href="#login" id="btnLogin">Comprar</a>
         </nav>
-    </div>
+    </header>
     <main>
-        <br> <hr>
-        <section id="cadastroClientes">
-            <h2>Cadastro de Cliente</h2>
-            <form id="formUsuario">
-                <label for="nome">Nome do cliente:</label>
-                <input type="text" id="nome" name="nome"><br>
-
-                <label for="email">E-mail do cliente:</label>
-                <input type="email" id="email" name="email"><br>
-
-                <label for="telefone">Telefone do cliente:</label>
-                <input type="tel" id="telefone" name="telefone"><br>
-
-                <button type="reset">Limpar</button>
-                <button type="submit">Cadastrar</button>
-            </form>
-            <br>
-            <table id="tabelaUsuario">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Quantidade</th>
-                        <th>Modelo do veiculo</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+        <section id="home">
+            <h1>Em Alta</h1>
+            <div class="image-gallery">
+                <img src="https://blog.deltafiat.com.br/wp-content/uploads/2022/04/image5.jpeg" alt="Imagem 1">
+                <img src="https://blog.deltafiat.com.br/wp-content/uploads/2022/04/image7.jpeg" alt="Imagem 2">
+            </div>
+            <p>Carros e camionetes em grande demanda</p>
         </section>
-        <hr>
-        <section id="cadastroVeiculos">
-            <h2>Cadastro de Veiculo</h2>
-            <form id="formProduto">
-                <label for="modelo">Modelo do veiculo:</label>
-                <input type="text" id="modelo" name="modelo"><br>
-
-                <label for="quantidade">Quantidade:</label>
-                <input type="number" id="quantidade" name="quantidade"><br>
-
-                <label for="dias">Dias na locadora:</label>
-                <input type="number" id="dias" name="dias"><br>
-
-                <button type="reset">Limpar</button>
-                <button type="submit">Cadastrar</button>
-            </form>
-            <br>
-            <table id="tabela">
-                <thead>
-                    <tr>
-                        <th>Modelo</th>
-                        <th>Quantidade</th>
-                        <th>Dias na locadora</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+        <section id="carros">
+            <h1>Carros</h1>
+            <div class="image-gallery">
+                <img src="https://blog.deltafiat.com.br/wp-content/uploads/2022/04/image1.jpeg" alt="Imagem 3">
+                <img src="https://blog.deltafiat.com.br/wp-content/uploads/2022/04/image6.jpeg" alt="Imagem 4">
+                <img src="https://blog.deltafiat.com.br/wp-content/uploads/2022/04/image4.jpeg" alt="Imagem 5">
+            </div>
+            <p>Alugamos carros </p>
         </section>
-    </section>
-    <hr>
-    <section id="cadastroAlocacoes">
-        <h2>Cadastro de Veiculos Alocados</h2>
-        <form id="formVendas">
-            <label for="modeloV">Veiculo Alocado</label>
-            <input type="text" id="modeloV" name="modeloV"><br>
-
-            <label for="nomecliente">Nome do Cliente:</label>
-            <input type="text" id="nomecliente" name="nomecliente"><br>
-
-            <label for="diasA">Dias de alocação:</label>
-            <input type="number" id="diasA" name="diasA"><br>
-
-            <button type="reset">Limpar</button>
-            <button type="submit">Cadastrar</button>
-        </form>
-        <br>
-        <table id="tabelaVendas">
-            <thead>
-                <tr>
-                    <th>Veiculo Alocado</th>
-                    <th>Nome do Cliente:</th>
-                    <th>Dias de alocação</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </section>
-    <br> <hr>
+        <section id="camionetes">
+            <h1>Camionetes</h1>
+            <div class="image-gallery">
+                <img src="https://www.chevrolet.com.br/content/dam/chevrolet/south-america/brazil/portuguese/index/cars/cars-landing/12-images/ltz.jpg?imwidth=960" alt="Imagem 3">
+                <img src="https://www.chevrolet.com.br/content/dam/chevrolet/south-america/brazil/portuguese/index/cars/cars-landing/12-images/hc.jpg?imwidth=960" alt="Imagem 4">
+                <img src="https://revistaautomotivo.com.br/wp-content/uploads/2024/05/IMG_0825-1280x720.jpeg" alt="Imagem 5">
+            </div>
+            <p>Alugamos camionetes</p>
+        </section>
+        <section id="empresa">
+            <h1>Empresa</h1>
+            <div class="image-gallery">
+                <img src="https://mobilidade.estadao.com.br/wp-content/uploads/2020/12/Aluguel-de-carrosFrota-Localiza4.jpg" alt="Imagem 1">
+                <img src="https://www.carroreserva.com/includes/Capa-Site-Out-2022-653x442.jpg" alt="Imagem 2">
+            </div>
+            <p>Alugamos carros e camionetes</p>
+        </section>
     </main>
+    <dialog id="login">
+        <form>
+            <h2>Login</h2>
+                <label for="email"> E-mail:</label>
+                <input type="text" name="email" id="email"><br>
+                <label for="senha"> Senha: </label>
+                <input type="password" name="senha" id="senha"><br><br>
+                <button type="button" id="btnFechar">Sair</button>
+                <button type="submit">Entrar</button>
+        </form>
+    </dialog>
+    <script src="./login.js"></script>
 </body>
 </html>
