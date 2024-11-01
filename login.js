@@ -1,83 +1,51 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const formProduto = document.getElementById("formProduto");
-    const tabela = document.getElementById("tabela").getElementsByTagName("tbody")[0];
 
-    formProduto.addEventListener("submit", function (event) {
-        event.preventDefault();
+const btnLogin = document.getElementById('btnLogin');
+const btnFechar = document.getElementById('btnFechar');
 
-        const nome = document.getElementById("modelo").value;
-        const email = document.getElementById("quantidade").value;
-        const modelo = document.getElementById("dias").value;
+btnLogin.onclick = function (){
+    login.showModal();
+}
 
-        const novaLinha = tabela.insertRow();
-        novaLinha.insertCell(0).textContent = nome;
-        novaLinha.insertCell(1).textContent = email;
-        novaLinha.insertCell(2).textContent = modelo;
+btnFechar.onclick = function (){
+    login.close();
+}
 
-        const acaoCell = novaLinha.insertCell(3);
-        const botaoRemover = document.createElement("button");
-        botaoRemover.textContent = "Remover";
-        botaoRemover.onclick = function () {
-            tabela.deleteRow(novaLinha.rowIndex - 1);
-        };
-        acaoCell.appendChild(botaoRemover);
 
-        formProduto.reset();
+const login = document.getElementById('login');
+const formLogin = document.querySelector('#login form');
+
+
+let dadosUsuarios = [
+        { nome: "email", email: "email@email.com", senha: "123" },
+        { nome: "yahoo", email: "yahoo@email.com", senha: "123" },
+        { nome: "gmail", email: "gmail@email.com", senha: "123" },
+    ];
+
+formLogin.addEventListener('submit', evento =>{
+    evento.preventDefault();
+
+    let msgErro = document.querySelector('.erro');
+    if(msgErro) login.removeChild(msgErro);
+
+    let email = document.getElementById('email').value;
+    let senha = document.getElementById('senha').value;
+
+    dadosUsuarios.forEach(usuario =>{
+        if (email == usuario.email && senha == usuario.senha) {
+            sessionStorage.setItem('usuarioLogado', true);
+            sessionStorage.setItem('nomeUsuario', usuario.nome);
+
+            window.location.href = "./Login/index.html";
+        }
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const formProduto = document.getElementById("formUsuario");
-    const tabela = document.getElementById("tabelaUsuario").getElementsByTagName("tbody")[0];
+    let usuarioLogado = sessionStorage.getItem('usuarioLogado');
 
-    formProduto.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const nome = document.getElementById("nome").value;
-        const email = document.getElementById("email").value;
-        const telefone = document.getElementById("telefone").value;
-
-        const novaLinha = tabela.insertRow();
-        novaLinha.insertCell(0).textContent = nome;
-        novaLinha.insertCell(1).textContent = email;
-        novaLinha.insertCell(2).textContent = telefone;
-
-        const acaoCell = novaLinha.insertCell(3);
-        const botaoRemover = document.createElement("button");
-        botaoRemover.textContent = "Remover";
-        botaoRemover.onclick = function () {
-            tabela.deleteRow(novaLinha.rowIndex - 1);
-        };
-        acaoCell.appendChild(botaoRemover);
-
-        formProduto.reset();
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const formProduto = document.getElementById("formVendas");
-    const tabela = document.getElementById("tabelaVendas").getElementsByTagName("tbody")[0];
-
-    formProduto.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const nome = document.getElementById("modeloV").value;
-        const email = document.getElementById("nomecliente").value;
-        const modelo = document.getElementById("diasA").value;
-
-        const novaLinha = tabela.insertRow();
-        novaLinha.insertCell(0).textContent = nome;
-        novaLinha.insertCell(1).textContent = email;
-        novaLinha.insertCell(2).textContent = modelo;
-
-        const acaoCell = novaLinha.insertCell(3);
-        const botaoRemover = document.createElement("button");
-        botaoRemover.textContent = "Remover";
-        botaoRemover.onclick = function () {
-            tabela.deleteRow(novaLinha.rowIndex - 1);
-        };
-        acaoCell.appendChild(botaoRemover);
-
-        formProduto.reset();
-    });
+    if(!usuarioLogado){
+        let erro = document.createElement('p');
+        erro.classList.add("erro");
+        erro.innerText = "Login ou senha inválidos!";
+        login.insertBefore(erro, login.firstChild);
+        document.querySelector("#login form").reset();
+    }
 });
