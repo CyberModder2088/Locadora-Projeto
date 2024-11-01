@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./login.js" defer></script>
+</head>
+<body>
+    <div>
+        <nav >
+            <a href="#cadastroClientes">Clientes</a>
+            <a href="#cadastroVeiculos">Veiculos na Locadora</a>
+            <a href="#cadastroAlocacoes">Alocações Cadastradas</a>
+        </nav>
+    </div>
+    <main>
+        <br> <hr>
+        <section id="cadastroClientes">
+            <h2>Cadastro de Cliente</h2>
+            <form id="formUsuario">
+                <label for="nome">Nome do cliente:</label>
+                <input type="text" id="nome" name="nome"><br>
+
+                <label for="email">E-mail do cliente:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="telefone">Telefone do cliente:</label>
+                <input type="tel" id="telefone" name="telefone"><br>
+
+                <button type="reset">Limpar</button>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <br>
+            <table id="tabelaUsuario">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Modelo do veiculo</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <hr>
+        <section id="cadastroVeiculos">
+            <h2>Cadastro de Veiculo</h2>
+            <form id="formProduto">
+                <label for="modelo">Modelo do veiculo:</label>
+                <input type="text" id="modelo" name="modelo"><br>
+
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" name="quantidade"><br>
+
+                <label for="dias">Dias na locadora:</label>
+                <input type="number" id="dias" name="dias"><br>
+
+                <button type="reset">Limpar</button>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <br>
+            <table id="tabela">
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Quantidade</th>
+                        <th>Dias na locadora</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </section>
+    <hr>
+    <section id="cadastroAlocacoes">
+        <h2>Cadastro de Veiculos Alocados</h2>
+        <form id="formVendas">
+            <label for="modeloV">Veiculo Alocado</label>
+            <input type="text" id="modeloV" name="modeloV"><br>
+
+            <label for="nomecliente">Nome do Cliente:</label>
+            <input type="text" id="nomecliente" name="nomecliente"><br>
+
+            <label for="diasA">Dias de alocação:</label>
+            <input type="number" id="diasA" name="diasA"><br>
+
+            <button type="reset">Limpar</button>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <br>
+        <table id="tabelaVendas">
+            <thead>
+                <tr>
+                    <th>Veiculo Alocado</th>
+                    <th>Nome do Cliente:</th>
+                    <th>Dias de alocação</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+    <br> <hr>
+    </main>
+</body>
+</html>

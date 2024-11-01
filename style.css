@@ -1,0 +1,170 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #dadada;
+}
+
+h1, h2 {
+    color: #000;
+    text-align: center;
+    margin: 30px;
+    padding: 0;
+}
+
+nav {
+    background-color: #111;
+    display: flex;
+    align-items: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, #111, #555);
+    border-bottom: 2px solid #111;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: padding 0.2s ease-in-out;
+}
+
+a:hover {
+    background-image: linear-gradient(to top, #555, #ff0000);
+}
+
+form {
+    width: 60%;
+    min-width: 450px;
+    text-align: right;
+}
+
+form label {
+    display: inline-block;
+    width: calc(20% - 30px);
+    text-align: left;
+    margin: 10px;
+}
+
+form p.erro {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0;
+    background-color: rgb(255, 190, 190);
+    color: rgb(86, 2, 2);
+    text-align: center;
+}
+
+form p.sucesso {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0;
+    background-color: rgb(190, 255, 212);
+    color: rgb(2, 86, 41);
+    text-align: center;
+}
+
+form input {
+    width: calc(80% - 22px);
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+form button {
+    background-color: #ff4646;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #440000;
+}
+
+button[type="reset"] {
+    background-color: #ff4646;
+}
+
+button[type="reset"]:hover {
+    background-color: #440000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #440000;
+    color: white;
+}
+
+table tr td:last-child {
+    width: 90px;
+    text-align: center;
+}
+
+table th:last-child {
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table td a {
+    font-weight: bold;
+    color: #440000;
+}
+
+table td a:hover {
+    color: #1f0000;
+}
+
+table td a:last-child {
+    color: rgb(186, 36, 36);
+    margin-left: 10px;
+}
+
+table td a:last-child:hover {
+    color: rgb(133, 11, 11);
+}
+
+#orcamentos table tr th:last-child {
+    min-width: 200px;
+}
+
+#cadastroClientes {
+    padding-top: 5vh;
+    height: 60vh;
+}
+
+#cadastroVeiculos {
+    padding-top: 5vh;
+    height: 60vh;
+    background-color: #afafaf;
+}
+
+#cadastroAlocacoes {
+    padding-top: 5vh;
+    height: 60vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
